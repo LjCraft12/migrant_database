@@ -21,6 +21,8 @@
 * Express Js
 * EJS view engine
 * Node Js
+** Npm
+* Bower
 
 ## Developer Team
 * Gigi Wilburn (project lead)

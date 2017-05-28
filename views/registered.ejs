@@ -1,8 +1,10 @@
+<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+
 <% include ./partials/header.ejs%>
 
-<ul class="list-group">
+<table class="table table-bordered">
     <% clients.forEach(function (client) {%>
-    <li>
+    <li class="list-group">
         <%= client.name %>
         <%= client.phone %>
         <%= client.address %>
@@ -14,6 +16,6 @@
         <%= client.specialty %>
     </li>
     <% })%>
-</ul>
+</table>
 
 <% include ./partials/footer %>

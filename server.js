@@ -39,10 +39,13 @@ app.set('view engine', 'ejs');
 
 // Body parser middleware //
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+
+// Set public folder to static
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Home page
 app.get('/', (req, res) => {
@@ -93,20 +96,8 @@ app.post('/clients/add', (req, res) => {
         } else {
             res.redirect('/');
         }
-    })
-
-    // // For testing only delete in production
-    // console.log(client.name);
-    // console.log(client.phone);
-    // console.log(client.address);
-    // console.log(client.address2);
-    // console.log(client.state);
-    // console.log(client.city);
-    // console.log(client.zip);
-    // console.log(client.yoe);
-    // console.log(client.specialty);
-
     });
+});
 
 // Registered route
 app.get('/clients/registered', (req, res) => {
