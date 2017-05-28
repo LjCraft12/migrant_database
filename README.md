@@ -14,7 +14,15 @@
 4. Run "npm start" in your terminal (inside the project folder).
 5. Navigate to localhost:3000 (or which ever port you are using if you changed it in the server file)
 
-### Developer Team
+## Technologies used
+* Typescript
+* HTML 5 w/ CSS3
+* Mongo database
+* Express Js
+* EJS view engine
+* Node Js
+
+## Developer Team
 * Gigi Wilburn (project lead)
 * Perry Craft (assistant developer)
 * Makai Takori (assistant developer)
