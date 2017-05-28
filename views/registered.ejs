@@ -1,8 +1,18 @@
 <% include ./partials/header.ejs%>
 
-<ul>
+<ul class="list-group">
     <% clients.forEach(function (client) {%>
-    <li>Name: <%= client.name %> Phone: <%= client.phone %>  </li>
+    <li>
+        <%= client.name %>
+        <%= client.phone %>
+        <%= client.address %>
+        <%= client.address2%>
+        <%= client.state %>
+        <%= client.city %>
+        <%= client.zip %>
+        <%= client.yoe %>
+        <%= client.specialty %>
+    </li>
     <% })%>
 </ul>
 
