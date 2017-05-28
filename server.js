@@ -76,7 +76,7 @@ app.get('/add', (req, res) => {
 });
 
 // Client submit POST route
-app.post('/add', (req, res) => {
+app.post('/clients/add', (req, res) => {
     let client = new Client();
     client.name = req.body.name;
     client.phone = req.body.phone;
