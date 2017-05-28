@@ -25,6 +25,6 @@
 * Bower
 
 ## Developer Team
-* Gigi Wilburn (project lead)
+* Gigi Wilborn (project lead)
 * Perry Craft (assistant developer)
 * Makai Takori (assistant developer)
