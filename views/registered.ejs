@@ -1,0 +1,9 @@
+<% include ./partials/header.ejs%>
+
+<ul>
+    <% clients.forEach(function (client) {%>
+    <li>Name: <%= client.name %> Phone: <%= client.phone %>  </li>
+    <% })%>
+</ul>
+
+<% include ./partials/footer %>
