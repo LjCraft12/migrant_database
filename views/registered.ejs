@@ -2,9 +2,9 @@
 
 <% include ./partials/header.ejs%>
 
-<table class="table table-bordered">
+<ul class="list-group">
     <% clients.forEach(function (client) {%>
-    <li class="list-group">
+    <li class="list-group-item">
         <%= client.name %>
         <%= client.phone %>
         <%= client.address %>
@@ -16,6 +16,6 @@
         <%= client.specialty %>
     </li>
     <% })%>
-</table>
+</ul>
 
 <% include ./partials/footer %>

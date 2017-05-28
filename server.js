@@ -8,7 +8,6 @@ const bodyParser = require('body-parser');
 // Bringing in client model
 let Client = require('./models/client');
 
-
 // Mongoose setup //
 mongoose.connect('mongodb://localhost:27017/Migrant_Clients');
 let db = mongoose.connection;
@@ -22,7 +21,6 @@ db.on('connected',  () => {
 db.on('error', (err) => {
     console.log('Error could not connect to Mongo Database ' + err)
 });
-
 
 // Port configuration
 app.listen(port, (err) => {
@@ -56,7 +54,7 @@ app.get('/', (req, res) => {
 });
 
 // Add route
-app.get('/clients/add', (req, res) => {
+app.get('/add', (req, res) => {
     let clients = [
         {
             id:1,
@@ -78,7 +76,7 @@ app.get('/clients/add', (req, res) => {
 });
 
 // Client submit POST route
-app.post('/clients/add', (req, res) => {
+app.post('/add', (req, res) => {
     let client = new Client();
     client.name = req.body.name;
     client.phone = req.body.phone;
@@ -94,13 +92,13 @@ app.post('/clients/add', (req, res) => {
             console.log('Warning client not saved ' + err);
             return
         } else {
-            res.redirect('/');
+            res.redirect('/thank_you');
         }
     });
 });
 
 // Registered route
-app.get('/clients/registered', (req, res) => {
+app.get('/registered', (req, res) => {
     Client.find({}, (err, clients) => {
         if (err) {
             console.log(err);
@@ -112,4 +110,9 @@ app.get('/clients/registered', (req, res) => {
             });
         }
     });
+});
+
+// Thank you route
+app.get('/thank_you', (req, res) => {
+    res.send('Hello thank you')
 });
